@@ -29,9 +29,12 @@ app.config(function($routeProvider) {
 
 app.run(function($rootScope, $http, $location, $route, $timeout, $interval, $window) {
 
+
   $rootScope.variable = "test";
   $rootScope.bool = true;
-  console.log('test');
+
+
+
   $rootScope.testHome = function() {
     $rootScope.bool = false;
   }
