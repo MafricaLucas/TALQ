@@ -6,20 +6,47 @@
     <img class="logoApp" src="static/img/LogoTalq1.png">
   </div>
   <div class="containerSignDiv">
-    <div class="signDiv">
+    <div class="signDiv" ng-click="signUpStep = 1">
       <p class="signPara">Sign Up</p>
     </div>
-    <div class="logDiv">
+    <div class="logDiv" ng-click="signUpStep = 0">
       <p class="signLog">Log In</p>
     </div>
   </div>
-  <div class="containerFormSign">
+  <div ng-show="signUpStep == 0" class="containerFormSign">
     <div class="inputDiv">
       <div class="divIcone">
         <i class="icon envelope outline"></i>
       </div>
       <div class="divInput">
-        <input type="text" placeholder="Mail">
+        <input type="text" ng-model="user.mail" placeholder="Mail">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divIcone">
+        <i class="icon key"></i>
+      </div>
+      <div class="divInput">
+        <input type="password" placeholder="Password">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divButtonNext" ng-click="connexion();">
+        <p class="paraButtonNext">Let's go! <i class="arrow right icon"></i></p>
+      </div>
+    </div>
+  </div>
+  <div ng-show="signUpStep == 1" class="containerFormSign">
+    <div class="inputDiv">
+      <div class="divIcone">
+        <i class="icon envelope outline"></i>
+      </div>
+      <div class="divInput">
+        <input type="text" ng-model="user.mail" placeholder="Mail">
       </div>
       <div class="divIcone">
       </div>
@@ -49,20 +76,75 @@
         <i class="icon birthday cake"></i>
       </div>
       <div class="divInput birthday">
-        <input type="number" placeholder="dd" class="day">
+        <input type="number" ng-model="user.day" placeholder="dd" class="day">
       </div>
       <div class="divInput birthday">
-        <input type="number" placeholder="mm" class="month">
+        <input type="number" ng-model="user.month" placeholder="mm" class="month">
       </div>
       <div class="divInput birthday">
-        <input type="number" placeholder="yy" class="year">
+        <input type="number" ng-model="user.year" placeholder="yy" class="year">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divButtonNext" ng-click="signUpStep = 2">
+        <p class="paraButtonNext">NEXT <i class="angle double right icon"></i></p>
+      </div>
+    </div>
+  </div>
+  <div ng-show="signUpStep == 2" class="containerFormSign">
+    <div class="inputDiv">
+      <div class="divIcone">
+        <i class="icon user"></i>
+      </div>
+      <div class="divInput">
+        <input type="text" ng-model="user.last_name" placeholder="Name">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divIcone">
+        <i class="icon user"></i>
+      </div>
+      <div class="divInput">
+        <input type="text" ng-model="user.first_name" placeholder="First name">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divIcone">
+        <i class="icon flag outline"></i>
+      </div>
+      <div class="divInput">
+        <input type="text" ng-model="user.language" placeholder="Language">
+      </div>
+      <div class="divIcone">
+      </div>
+    </div>
+    <div class="inputDiv">
+      <div class="divIcone">
+      </div>
+      <div class="genderContainer">
+        <div class="maleContainer">
+          <i class="icon mars"></i>
+          <div ng-click="user.gender='male'" ng-class="(user.gender == 'male')? 'ok' : 'nok'" class="divGender male">
+          </div>
+        </div>
+        <div class="femaleContainer">
+          <div ng-click="user.gender='female'" ng-class="(user.gender == 'female')? 'ok' : 'nok'" class="divGender female">
+          </div>
+          <i class="icon venus"></i>
+        </div>
       </div>
       <div class="divIcone">
       </div>
     </div>
     <div class="inputDiv">
       <div class="divButtonNext">
-        <p class="paraButtonNext">NEXT <i class="angle double right icon"></i></p>
+        <p class="paraButtonNext">Let's go! <i class="sign-in icon"></i></p>
       </div>
     </div>
   </div>

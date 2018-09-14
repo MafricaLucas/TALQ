@@ -44,3 +44,21 @@
 }
 #home .divButtonNext{width: 35%;border-radius: 20px;display:  flex;padding: 2%;margin: auto;background: #1b1b1b;border: 4px solid white;}
 #home .paraButtonNext{color: #ffffff;margin:  auto;font-size: 1.3rem;}
+#home .divGender{
+  width:  20px;
+  height:  20px;
+  background: white;
+  margin: auto;
+}
+#home .divGender.male{
+  margin: auto;
+}
+#home .divGender.ok{
+  background: #6eff55;
+}
+#home .divGender.female{
+  margin: auto;
+}
+#home .genderContainer{display:  flex;width: 80%;}
+#home .maleContainer{font-size: 1.4rem;color: white;width:  50%;margin: auto;display:  flex;}
+#home .femaleContainer{color:  white;font-size: 1.4rem;width: 50%;display: flex;margin: auto;}
