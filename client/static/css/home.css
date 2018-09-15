@@ -5,8 +5,10 @@
 #home .logoApp{margin: auto;height: 100%;}
 #home .containerSignDiv{width:  100%;height: 5%;display:  flex;}
 #home .signDiv{width:  50%;display: flex;border-right: 1px solid white;height: 100%;margin:  auto;}
+#home .signDiv.ok{background: #75ccf9;}
 #home .signPara{margin:  auto;color:  white;font-size: 1rem;}
 #home .logDiv{width: 50%;border-left: 1px solid white;height:  100%;display: flex;margin: auto;}
+#home .logDiv.ok{background: #75ccf9;}
 #home .signLog{margin: auto;color: white;font-size: 1rem;}
 #home .containerFormSign{height: 65%;width: 100%;}
 #home .inputDiv{width: 100%;padding: 3% 0px;display:  flex;}
@@ -15,12 +17,16 @@
     margin: auto;
     font-size: 1.2rem;
 }
-#home .divInput{width:  80%;margin:  auto;display:  flex;}
-#home .divInput input{
+#home .divInput{width: 80%;margin:  auto;display:  flex;}
+#home .divInput input,#home .divInput select{
     width:  90%;
     margin: auto;
     border:  none;
     padding:  3%;
+}
+
+#home .divInput input.noConfirm, #home .divInput input.disabled{
+  background: #fd8787;
 }
 #home .divInput.birthday input{
     width: 90%;
@@ -43,6 +49,8 @@
     border:  none;
 }
 #home .divButtonNext{width: 35%;border-radius: 20px;display:  flex;padding: 2%;margin: auto;background: #1b1b1b;border: 4px solid white;}
+
+#home .divButtonNext.disabled{background: #969696;border: 4px solid #bfbfbf;}
 #home .paraButtonNext{color: #ffffff;margin:  auto;font-size: 1.3rem;}
 #home .divGender{
   width:  20px;

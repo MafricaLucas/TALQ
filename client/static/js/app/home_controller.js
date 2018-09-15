@@ -11,9 +11,13 @@ app.controller("home_controller", function($scope, $rootScope, $location, $http,
     day: null,
     month: null,
     year: null,
+    password: null,
   }
   $rootScope.header=false;
   $scope.connexion = function(){
+    console.log($scope.user);
+  }
+  $scope.inscription = function(){
     console.log($scope.user);
   }
 });
