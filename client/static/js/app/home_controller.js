@@ -2,15 +2,15 @@ app.controller("home_controller", function($scope, $rootScope, $location, $http,
 
   $scope.signUpStep = 0;
   $scope.user = {
-    first_name: null,
-    last_name: null,
-    mail: null,
+    first_name: '',
+    last_name: '',
+    mail: '',
     language: null,
     gender: null,
     birthday: null,
-    day: null,
-    month: null,
-    year: null,
+    day: '',
+    month: '',
+    year: '',
     password: null,
   }
   $rootScope.header=false;

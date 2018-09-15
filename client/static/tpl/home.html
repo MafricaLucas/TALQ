@@ -19,7 +19,7 @@
         <i class="icon envelope outline"></i>
       </div>
       <div class="divInput">
-        <input type="email" ng-model="user.mail" placeholder="Mail" ng-class="(!user.mail)? 'disabled':''">
+        <input type="email" ng-model="user.mail" placeholder="Mail">
       </div>
       <div class="divIcone">
       </div>
@@ -46,7 +46,7 @@
         <i class="icon envelope outline"></i>
       </div>
       <div class="divInput">
-        <input type="email" ng-model="user.mail" placeholder="Mail" ng-class="(!user.mail)? 'disabled':''">
+        <input type="email" ng-model="user.mail" placeholder="Mail">
       </div>
       <div class="divIcone">
       </div>
@@ -66,7 +66,7 @@
         <i class="icon key"></i>
       </div>
       <div class="divInput">
-        <input type="password"  ng-class="(user.password != user.confirm) ? 'noConfirm':''" ng-model="user.confirm" placeholder="Confirm password">
+        <input type="password"  ng-class="((user.password != user.confirm) && user.confirm.length>0) ? 'noConfirm':''" ng-model="user.confirm" placeholder="Confirm password">
       </div>
       <div class="divIcone">
       </div>
@@ -76,13 +76,13 @@
         <i class="icon birthday cake"></i>
       </div>
       <div class="divInput birthday">
-        <input type="number" ng-model="user.day" placeholder="dd" class="day" min="1" max="31" ng-class="(!user.day)? 'disabled':''">
+        <input type="number" ng-model="user.day" placeholder="dd" class="day" min="1" max="31" ng-class="(!user.day && user.day.length >0 )? 'disabled':''">
       </div>
       <div class="divInput birthday">
-        <input type="number" ng-model="user.month" placeholder="mm" class="month" min="1" max="12" ng-class="(!user.month)? 'disabled':''">
+        <input type="number" ng-model="user.month" placeholder="mm" class="month" min="1" max="12" ng-class="(!user.month && user.month.length >0 )? 'disabled':''">
       </div>
       <div class="divInput birthday">
-        <input type="number" ng-model="user.year" placeholder="yyyy" class="year" min="1910" max="2002" ng-class="(!user.year)? 'disabled':''">
+        <input type="number" ng-model="user.year" placeholder="yyyy" class="year" min="1910" max="2002" ng-class="(!user.year && user.year.length >0 )? 'disabled':''">
       </div>
       <div class="divIcone">
       </div>

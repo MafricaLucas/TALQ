@@ -25,7 +25,7 @@
     padding:  3%;
 }
 
-#home .divInput input.noConfirm, #home .divInput input.disabled{
+#home .divInput input.noConfirm, #home .divInput input.ng-invalid-email, #home .divInput input.ng-invalid-max, #home .divInput input.ng-invalid-min{
   background: #fd8787;
 }
 #home .divInput.birthday input{
